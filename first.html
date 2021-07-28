@@ -1,0 +1,128 @@
+
+<!--5 Write a JavaScript program to read store items and print each
+     item with its details like price , total qty available 
+Input
+storeItems = {
+   "eggs":{
+      "price":3.77,
+      "quantity":30
+   },
+   "milk":{
+      "price":2.22,
+      "quantity":23
+   },
+   "butter":{
+      "price":2.00,
+      "quantity":22
+   },
+   "carrots":{
+      "price":3.00,
+      "quantity":11
+   },
+   "beef":{
+      "price":6.18,
+      "quantity":34
+   },
+   "chicken":{
+      "price":5.44,
+      "quantity":34
+   }
+}​​​;
+​OUTPUT:
+“30 eggs each cost 3.77”
+“23 milks each cost 2.22”
+“22 butters each cost 2”
+“11 carrots each cost 3”
+“34 beefs each cost 6.18”
+“34 chickens each cost 5.44-->
+<html lang="en">
+<head>
+    <title>Store with Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+</head>
+<!--<button>Click to o/p</button>-->
+<table id="tbl" border="10" cellpadding="3" cellspacing="7">
+  <thead> 
+    <tr>
+    <th>Quantity</th>
+    <th>Message</th>
+     <th>Price</th>
+    </tr>
+    <p>hii</p>
+  </thead>
+   <tbody id="tdata">
+  </tbody>
+  </table>
+<button>Click to o/p</button><br><br>
+<body>
+    <script>
+storeItems = {
+    "eggs":{
+      "price":3.77,
+      "quantity":30},
+   "milk":{
+      "price":2.22,
+      "quantity":23
+   },
+   "butter":{
+      "price":2.00,
+      "quantity":22
+   },
+   "carrots":{
+      "price":3.00,
+      "quantity":11
+   },
+   "beef":{
+      "price":6.18,
+      "quantity":34
+   },
+   "chicken":{
+      "price":5.44,
+      "quantity":34
+   }}
+   storeItems = {
+    "eggs":{
+      "price":3.77,
+      "quantity":30},
+   "milk":{
+      "price":2.22,
+      "quantity":23
+   },
+   "butter":{
+      "price":2.00,
+      "quantity":22
+   },
+   "carrots":{
+      "price":3.00,
+      "quantity":11
+   },
+   "beef":{
+      "price":6.18,
+      "quantity":34
+   },
+   "chicken":{
+      "price":5.44,
+      "quantity":34
+   }}
+//“30 eggs each cost 3.77”
+   for(let i in storeItems) {   
+    document.write(storeItems[i].quantity+" "+i+"s each cost 3.77"+storeItems[i].price+"<br>");
+}
+$('button').click(function(){
+   for(let i in storeItems) {
+    $("#tdata").html()
+    $("#tdata").append("<tr>"  + 
+        "<td>"+` ${storeItems[i].quantity}`+"</td>"+
+        "<td>"+ `${[i]}s each cost`+"</td>"+
+        "<td>"+`${storeItems[i].price}`+"</td>",
+        "</tr>")};
+        $('button').hide();
+  }
+  
+  );
+    </script>
+    
+   </body>
+   
+</html>
